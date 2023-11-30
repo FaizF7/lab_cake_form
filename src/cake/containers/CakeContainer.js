@@ -52,10 +52,18 @@ const CakeContainer = () => {
 	// 
 	const cakeComponents = listOfCakes.map ((cake, index) => <Cake cake = {cake} key={index}/>)
 
+	//Function to pass a prop
+	const handleNewCakeSubmission = (newCake) => {
+		const updatedCakes = [...listOfCakes]; 
+		updatedCakes.push(newCake);
+		setListOfCakes(updatedCakes);
+	}
+
 	return (
     <>
-		<CakeForm/>
+		<CakeForm handleNewCakeSubmission={handleNewCakeSubmission}/>
         {cakeComponents}
+
     </>
 	)
 }
