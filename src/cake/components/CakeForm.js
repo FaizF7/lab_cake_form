@@ -38,7 +38,7 @@ const CakeForm = ({handleNewCakeSubmission}) => {
         setPrice("");
         setRating("");
         setIngredient("");
-        
+
         console.log(newCake);
         handleNewCakeSubmission(newCake);
     }
