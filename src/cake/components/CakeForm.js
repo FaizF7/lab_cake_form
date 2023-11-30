@@ -8,7 +8,22 @@ const CakeForm = () => {
     const [rating, setRating] = useState("")
     const [ingredients, setIngredient] = useState("")
 
-    
+    const updateCakeName = (event)=>{
+        setCakeName(event.target.value)
+    }
+
+    const updatePrice = (event)=>{
+        setPrice(event.target.value)
+    }
+
+    const updateRating = (event)=>{
+        setRating(event.target.value)
+    }
+
+    const updateIngredients = (event)=>{
+        setIngredient(event.target.value)
+    }
+
 
     return (  
         <section>
@@ -19,6 +34,7 @@ const CakeForm = () => {
                     id="cake-name"
                     type="text"
                     placeholder="enter your cake name"
+                    onInput={(event)=>updateCakeName(event)}
                 />
                 
                 <label htmlFor="cake-price">Price: </label>
@@ -26,6 +42,7 @@ const CakeForm = () => {
                     id="cake-price"
                     type="number"
                     placeholder="enter price"
+                    onInput={(event)=>updatePrice(event)}
                 />
 
                 <label htmlFor="cake-rating">Rating:</label>
@@ -34,7 +51,7 @@ const CakeForm = () => {
                     type="text"
                     placeholder="enter your ingredients..."
                 /> */}
-                <select id="cake-rating">
+                <select id="cake-rating" onInput={(event)=>updateRating(event)}>
                     <option>select rating</option>
                     <option>0</option>
                     <option>1</option>
@@ -49,6 +66,7 @@ const CakeForm = () => {
                     id="cake-ingredients"
                     type="text"
                     placeholder="enter your ingredients..."
+                    onInput={(event)=>updateIngredients(event)}
                 />
                 <input type="submit" value="Add New Cake"/>
             </form>
