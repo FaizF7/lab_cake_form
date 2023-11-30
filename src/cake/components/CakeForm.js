@@ -28,6 +28,11 @@ const CakeForm = ({handleNewCakeSubmission}) => {
         // No auto refresh when form submitted
         event.preventDefault();
 
+        if (!cakeName|| !price|| !rating||!ingredients){
+            alert("need to provide details")
+            return
+        }
+
         const newCake = {
             cakeName: cakeName,
             price: price,
