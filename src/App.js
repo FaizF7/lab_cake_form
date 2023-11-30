@@ -1,5 +1,5 @@
 import './App.css';
-import CakeContainer from './cake/CakeContainer';
+import CakeContainer from './cake/containers/CakeContainer';
 
 function App() {
   return (
