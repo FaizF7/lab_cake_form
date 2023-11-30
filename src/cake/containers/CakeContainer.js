@@ -47,11 +47,13 @@ const CakeContainer = () => {
 		]		
 	)
 
+
+	// 
+	const cakeComponents = listOfCakes.map ((cake, index) => <Cake cake = {cake} key={index}/>)
+
   return (
     <>
-        <Cake />
-        <Cake />
-        <Cake />
+       {cakeComponents}
     </>
   )
 }
